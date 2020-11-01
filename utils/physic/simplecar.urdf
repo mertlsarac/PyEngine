@@ -1,0 +1,29 @@
+
+<?xml version="1.0"?>
+<robot name="simplecar">
+    <!-- Base Frame of Car -->
+    <link name="base_link">
+        <visual>
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+
+          <geometry>
+            <mesh filename="pyramid.obj" size=".1 .1 .1"/>
+          </geometry>
+
+          <material name="red">
+            <color rgba="1 0.4 0.4 1"/>
+          </material>
+        </visual>
+
+        <collision>
+            <geometry>
+                <mesh filename="pyramid.obj" size=".1 .1 .1"/>
+            </geometry>
+        </collision>
+       <inertial>
+         <origin xyz="0 0 0.5" rpy="0 0 0"/>
+         <mass value="100"/>
+         <inertia ixx="100"  ixy="0"  ixz="0" iyy="100" iyz="0" izz="100" />
+       </inertial>
+    </link>
+</robot>
